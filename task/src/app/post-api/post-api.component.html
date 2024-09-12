@@ -1,0 +1,89 @@
+<div class="container-fluid p-5">
+    <h2>POST API Operations</h2>
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>POST API</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last name</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if(searchedData.length === 0) {
+                                    <tr>
+                                        <td colspan="4" class="text-center">No Data Found</td>
+                                    </tr>
+                                }
+                                @else {
+                                    <tr *ngFor="let item of searchedData">
+                                        <td>{{item.id}}</td>
+                                        <td>{{item.firstname}}</td>
+                                        <td>{{item.lastname}}</td>
+                                        <td class="d-flex">
+                                            <button class="btn btn-success w-50 mx-1" (click)="onEdit(item)">Edit</button>
+                                            <button class="btn btn-danger w-50" (click)="onDelete(item.id)">Delete</button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>POST API</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1" class="form-label">ID:</label>
+                        <input type="text" class="form-control" placeholder="Enter ID" [(ngModel)]="formData.id">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter First Name"
+                            [(ngModel)]="formData.firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter Last Name"
+                            [(ngModel)]="formData.lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1" class="form-label">Search By User ID:</label>
+                        <input type="number" class="form-control" placeholder="Enter user ID" [(ngModel)]="searchById">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    @if (formData.id == 0) {
+                        <button type="submit" class="btn btn-primary my-3" (click)="postUser()" [disabled]="postLoading">
+                            <ng-container *ngIf="postLoading; else postButtonText">Loading...</ng-container>
+                            <ng-template #postButtonText>POST</ng-template>
+                        </button>
+                    }
+                    @else {
+                        <button type="submit" class="btn btn-success my-3" (click)="updateUser()" [disabled]="updateLoading">
+                            <ng-container *ngIf="updateLoading; else updateButtonText">Loading...</ng-container>
+                            <ng-template #updateButtonText>Update</ng-template>
+                        </button>
+                    }
+                    <button type="submit" class="btn btn-secondary my-3 mx-2" (click)="searchUser()" [disabled]="searchLoading">
+                        <ng-container *ngIf="searchLoading; else searchButtonText">Loading...</ng-container>
+                        <ng-template #searchButtonText>Search</ng-template>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

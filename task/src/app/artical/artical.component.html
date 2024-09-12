@@ -1,0 +1,45 @@
+<div>
+    <h1 id="Articles" class="articles myanimatedblock">My Articles</h1>
+        <p class="articalInfo myanimatedblock">
+            In the ever-evolving world of web development, Angular has established itself as a powerhouse for building
+            dynamic, single-page applications (SPAs). Developed and maintained by Google, Angular offers a robust
+            framework for creating rich user interfaces with a scalable and maintainable architecture. This article
+            explores Angular's core features, its advantages for front-end development, and how you can leverage it to
+            enhance your portfolio.
+        </p>
+
+        <br>
+        <br>
+
+        <section class="">
+            <div class="row m-0">
+                <div class="col-12 col-md-3 myanimatedblock">
+                    <label class="form-label text-danger fw-bold" #label1>Announcement</label>
+                    <img src="assets/images/a.jpg" class="img-fluid" (click)="openModal(label1.innerHTML, 'a.jpg', heading1.innerHTML)" style="border-radius: 15px; cursor: pointer;">
+                    <h2 class="fs-5" #heading1>Building an Inclusive Future: 2020 Diversity at Lambda School
+                    </h2>
+                </div>
+                <div class="col-12 col-md-3 myanimatedblock">
+                    <label class="form-label text-danger fw-bold" #label2>Admissions</label>
+                    <img src="assets/images/b.jpg" class="img-fluid" (click)="openModal(label2.innerHTML, 'b.jpg', heading2.innerHTML)" style="border-radius: 15px; cursor: pointer;">
+                    <h2 class="fs-5" #heading2>Checklist: 5 Things to do BeforeYour First Day of Lambda School,
+                        in!
+                    </h2>
+                </div>
+                <div class="col-12 col-md-3 myanimatedblock">
+                    <label class="form-label text-danger fw-bold" #label3>Announcement 2</label>
+                    <img src="assets/images/c.jpg" class="img-fluid" (click)="openModal(label3.innerHTML, 'c.jpg', heading3.innerHTML)" style="border-radius: 15px; cursor: pointer;">
+                    <h2 class="fs-5" #heading3>An Update on Lambda School and ISAs in California
+                    </h2>
+                </div>
+                <div class="col-12 col-md-3 myanimatedblock">
+                    <label class="form-label text-danger fw-bold" #label4>Admissions 2</label>
+                    <img src="assets/images/d.jpg" class="img-fluid" (click)="openModal(label4.innerHTML, 'd.jpg', heading4.innerHTML)" style="border-radius: 15px; cursor: pointer;">
+                    <h2 class="fs-5" #heading4>Checklist: 5 Things to do BeforeYour First Day of Lambda School,
+                        in!
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+</div>

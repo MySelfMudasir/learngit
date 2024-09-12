@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-bg">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-end w-100 d-lg-none">
+            <!-- <button (click)="togglenav()" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <button (click)="togglenav()" class="navbar-toggler" type="button" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" routerLink="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" routerLink="/app-about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" routerLink="/app-artical">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" routerLink="/app-contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown" (click)="togglenav()">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        API
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/app-get-api">GET</a></li>
+                        <li><a class="dropdown-item" routerLink="/app-post-api">POST</a></li>
+                        <!-- <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/app-put-api">PUT</a></li>
+                        <li><a class="dropdown-item" routerLink="/app-delete-api">DELETE</a></li> -->
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <a href="https://x.com/mudasir" class="nav-link mx-2 mt-2 animate__animated animate__zoomIn">
+                    <i class="fa-brands fa-twitter fa-fade" style="font-size: 15px; color: black;"></i>
+                </a>
+                <a href="https://facebook.com/mudasir" class="nav-link mx-2 mt-2 animate__animated animate__zoomIn">
+                    <i class="fa-brands fa-facebook-f fa-fade" style="font-size: 15px; color: black;"></i>
+                </a>
+                <a href="https://github.com/mudasir" class="nav-link mx-2 mt-2 animate__animated animate__zoomIn">
+                    <i class="fa-brands fa-github fa-fade" style="font-size: 15px; color: black;"></i>
+                </a>
+                <a href="https://instagram.com/mudasir" class="nav-link mx-2 mt-2 animate__animated animate__zoomIn">
+                    <i class="fa-brands fa-instagram fa-fade" style="font-size: 15px; color: black;"></i>
+                </a>
+                <a href="https://wa.me/03068059557?text=Hi..."
+                    class="nav-link mx-2 mt-2 animate__animated animate__zoomIn">
+                    <i class="fa-brands fa-whatsapp fa-fade" style="font-size: 15px; color: black;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

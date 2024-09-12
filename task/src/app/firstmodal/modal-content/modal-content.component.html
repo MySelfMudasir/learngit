@@ -1,0 +1,22 @@
+
+
+
+<div class="modal-header ">
+    <h4 class="modal-title">{{ labelText }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+      <div class="row">
+          <div class="col-md-6 col-12">
+              <img *ngIf="selectedImageName" [src]="'assets/images/' + selectedImageName" class="img-fluid" alt="Selected Image">
+            </div>
+            <div class="col-md-6 col-12">
+                <p>{{ headingText }}</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus illo accusantium sapiente nemo ipsum neque soluta, corrupti odio ducimus id, laborum iste, quae deserunt libero magni optio eos reprehenderit? Molestiae perspiciatis earum ea explicabo inventore minima vel suscipit aspernatur tenetur illum deserunt reiciendis maiores autem facilis repellendus sapiente voluptatem dolorum ab provident, quo dolores nemo corrupti. Illum ad in, quas eum vero, voluptates quaerat aliquam voluptate tempora maiores, maxime laudantium? Illo accusantium vero praesentium molestiae ex et fugit cum quod. Quidem vel tenetur, accusantium alias asperiores velit provident perferendis temporibus qui quod natus nihil amet blanditiis error? Obcaecati, cumque.</p>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+  </div>
+  

@@ -1,0 +1,48 @@
+.footer{
+    font-size: 22px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-top: 50px;
+    padding: 20px;
+
+}
+.footer p{
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+    /* font-weight: 499; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer {
+    font-size: 22px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding-bottom: 80px; /* Increase the padding-bottom value to make space for the WhatsApp chat button */
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.footer p {
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+    /* font-weight: 499; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.whatsapp-chat {
+    position: fixed; /* Change position to fixed to keep the button at the bottom of the viewport */
+    bottom: 20px; /* Adjust the bottom value to position the button as desired */
+    right: 20px; /* Adjust the right value to position the button as desired */
+    z-index: 100;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid lime;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px #000000;
+}

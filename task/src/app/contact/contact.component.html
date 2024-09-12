@@ -1,0 +1,22 @@
+<div class="contactContainer">
+    <h1 id="Contact" class="contact myanimatedblock">Contact</h1>
+    <div class="row m-0">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-contact myanimatedblock">
+                <form (ngSubmit)="getFormData()" #contactForm="ngForm" class="form">
+                    <label class="form-label myanimatedblock">Name</label><br>
+                    <input class="form-control input-fields myanimatedblock" type="text" [(ngModel)]="formData.name" name="name" maxlength="50"
+                        placeholder="Enter your name"><br>
+                    <label class="form-label myanimatedblock" for="email">Email</label><br>
+                    <input class="form-control input-fields myanimatedblock" type="email" [(ngModel)]="formData.email" name="email" placeholder="Enter your email"><br>
+                    <label class="form-label myanimatedblock" for="subject">Subject</label><br>
+                    <input class="form-control input-fields myanimatedblock" type="text" [(ngModel)]="formData.subject" name="subject" maxlength="100"
+                        placeholder="Type the subject"><br>
+                    <label class="form-label myanimatedblock" for="message">Message</label><br>
+                    <textarea class="form-control input-fields myanimatedblock" maxlength="500" [(ngModel)]="formData.message" name="message" rows="4" placeholder="Type your message here..."></textarea><br>
+                    <button type="submit" class="btn btn-dark submit-button w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

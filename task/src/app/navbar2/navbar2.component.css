@@ -1,0 +1,38 @@
+.navbar-bg {
+    padding: 10px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.navbar-link {
+    font-size: 15px;
+    font-weight: 300px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 300px;
+}
+
+.nav-item a, .navbar-link a {
+    margin: 5px;
+    font-weight: 599;
+}
+
+.nav-item:hover {
+    .nav-item a {
+        color: #000000;
+    }
+    border-radius: 2px;
+    border-bottom: 2px solid #000000;
+    transition: 0.1s;
+}
+
+.nav-link:hover{
+    .fa-brands{
+        color: black;
+        scale: 1.5;
+        transition: 0.3s;
+    }
+
+}
